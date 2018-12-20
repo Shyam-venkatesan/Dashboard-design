@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- Main wrapper starts -->
+	<div class="wrapper">
+		<header class="db-header container hidden-xs">
+			<div class="logo-section">hybrid</div>
+			<div class="shortcut-section">
+				<a href="javascript:void(0);"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+				<a href="javascript:void(0);"><i class="fa fa-database" aria-hidden="true"></i></a>
+				<a href="javascript:void(0);"><i class="fa fa-bell" aria-hidden="true"></i></a>
+				<a href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i></a>
+			</div>
+		</header>
+	
+		<section class="content-wrapper container clearfix">
+			<div class="row">
+				<div class="menu-section hidden-xs col-md-2 col-sm-2 pad0" id="rightae">
+					<ul>
+						<li><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</li>
+						<li><i class="fa fa-television" aria-hidden="true"></i>UI Elements</li>
+						<li><i class="fa fa-bar-chart" aria-hidden="true"></i>Charts</li>
+						<li><i class="fa fa-table" aria-hidden="true"></i>Tabs & Panels</li>
+					</ul>
+				</div>
+		<div class="topnav db-header visible-xs">		  
+		  
+		<div>
+			<a href="javascript:void(0);" class="active icon logo-section" onclick="mobNav()" style="float: left;">
+   				 <i class="fa fa-bars"></i>    hybrid
+ 			 </a>
+
+			<div class="shortcut-section logo-section" style="padding: 10px 2%;">
+				<a href="javascript:void(0);" style="display: inline;padding-right: 0;">
+					<i class="fa fa-envelope" aria-hidden="true"></i></a>
+				<a href="javascript:void(0);" style="display: inline;padding-right: 0;">
+					<i class="fa fa-database" aria-hidden="true"></i></a>
+				<a href="javascript:void(0);" style="display: inline;padding-right: 0;">
+					<i class="fa fa-bell" aria-hidden="true"></i></a>
+				<a href="javascript:void(0);" style="display: inline;padding-right: 0;">
+					<i class="fa fa-user" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		  <div id="myLinks">
+   			 <a><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+				<a><i class="fa fa-television" aria-hidden="true"></i>UI Elements</a>
+				<a><i class="fa fa-bar-chart" aria-hidden="true"></i>Charts</a>
+				<a><i class="fa fa-table" aria-hidden="true"></i>Tabs &amp; Panels</a>
+		  </div>
+		</div>
+
+  
+				<div class="content-section col-md-10 col-sm-10 col-xs-12" id="leftae">
+					<h2>Dashboard <span>Summary of your App</span></h2>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="page-nav-desc">
+								<p>Home / Library / Data</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="gadget-section">
+								<div class="circle-base green-circle">
+									<i class="fa fa-eye fa-3x" aria-hidden="true"></i>
+								</div>
+								<p class="count-val"><span class="count">8457</span></p>
+								<p class="count-label">Daily visits</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="gadget-section">
+								<div class="circle-base blue-circle">
+									<i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+								</div>
+								<p class="count-val"><span class="count">52160</span></p>
+								<p class="count-label">Sales</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="gadget-section">
+								<div class="circle-base red-circle">
+									<i class="fa fa-comments fa-3x" aria-hidden="true"></i>
+								</div>
+								<p class="count-val"><span class="count">15823</span></p>
+								<p class="count-label">Comments</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="gadget-section">
+								<div class="circle-base yellow-circle">
+									<i class="fa fa-users fa-3x" aria-hidden="true"></i>
+								</div>
+								<p class="count-val"><span class="count">36752</span></p>
+								<p class="count-label">No. of visits</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="table-section">
+							<table class="table table-striped table-bordered" id="shyam-db">
+							    <thead >
+							      <tr>
+							        <th>Name</th>
+							        <th>Mobile</th>
+							        <th>Email</th>
+							        <th>Business credit</th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							      <tr>
+							        <td>Shriram</td>
+							        <td>9952985225</td>
+							        <td>shriram@gmail.com</td>
+							        <td>9382.534</td>
+							      </tr>
+							      <tr>
+							        <td>Shyam</td>
+							        <td>9940327211</td>
+							        <td>shyam@yahoo.com</td>
+							        <td>9325.1280</td>
+							      </tr>
+							      <tr>
+							        <td>Ganesh</td>
+							        <td>8840215678</td>
+							        <td>ganesh@hotmail.com</td>
+							        <td>7367.9763</td>
+							      </tr>
+							      <tr>
+							        <td>Naveen</td>
+							        <td>8840213746</td>
+							        <td>naveen@gmail.com</td>
+							        <td>8823.345</td>
+							      </tr>
+							      <tr>
+							        <td>Gokul</td>
+							        <td>9940274009</td>
+							        <td>gokul@yahoo.com</td>
+							        <td>7676.235</td>
+							      </tr>
+							    </tbody>
+							  </table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+		</footer>
+	</div>
+	<!-- Main wrapper ends -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>
